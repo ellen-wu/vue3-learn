@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    new Promise((resolve, reject) => {
+        console.log("这是第一层");
+        resolve('这是第二层');
+        //reject('这是一个错误');
+    }).then(res => {
+        console.log(res);
+
+        /*return new Promise((resolve, reject) => {
+            resolve('这是第三层');
+        });*/
+
+        // return Promise.resolve("这是第三层");
+
+        return {mess: "这是第三层"};
+    }, err => {
+        console.log(err);
+    }).then(res => {
+        console.log(res.mess);
+    })
+
+
+    Promise.all([
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('这是第一个请求');
+            }, 1000)
+        }),
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('这是第二个请求');
+            }, 1000)
+        }),
+    ]).then(res => {
+        console.log(res);
+    });
+</script>

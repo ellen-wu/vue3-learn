@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 解构赋值
+    let [a, b, c] = [1, 2 ,3];
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    // 对象赋值 左边的赋值需要和对象属性相对应
+    const obj = {name: 'zhangsan', age: 22, gender: 'famale'};
+    let {name, age, gender} = obj;
+
+    console.log(name);
+    console.log(age);
+    console.log(gender);
+
+
+    // 三点扩展运算符
+    let arr1 = [1, 2, 3];
+    let arr2 = [...arr1, 7, 8, 9];
+
+    console.log(arr2);
+
+
+    function show(a, b, c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+
+    let arr3 = [4, 5, 6];
+
+    show(...arr3);
+
+    function demo(...args) {
+        console.log(args);
+    }
+
+    demo(1, 2, 3);
+
+
+
+</script>

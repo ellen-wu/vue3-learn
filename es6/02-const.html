@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>const</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 常量
+    const PI = 3.14;
+
+    // 复合类型 引用对象不可修改，内容可修改  由于栈中存储的是内存地址
+    const myObj = {name: 'zhangsan', age: 23}
+    myObj.name = 'lisi';
+
+    console.log(myObj);
+
+</script>

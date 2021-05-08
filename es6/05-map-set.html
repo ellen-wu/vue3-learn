@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map and set</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    const  obj = new Set();
+    obj.add(1);
+
+    obj.add(2);
+    obj.add(3);
+    obj.add(4);
+
+    obj.add(['aa', 'bb']);
+
+    obj.delete(2);
+
+    console.log(obj.has(3));
+
+    console.log(obj);
+
+    obj.forEach(n => console.log(n))
+
+    console.log(obj.size);
+
+
+
+    const  myMap = new Map();
+    myMap.set("one", "two");
+    myMap.set("info", ['aa', 'bb']);
+
+    myMap.get("one");
+
+    myMap.size;
+
+
+    console.log(myMap);
+</script>

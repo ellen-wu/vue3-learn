@@ -1,0 +1,17 @@
+{
+  "name": "webpack02",
+  "version": "1.0.0",
+  "description": "webpack打包和压缩html，使用插件对html文件进行处理（html-webpack-plugin） npm i html-webpack-plugin -D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.1.0",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

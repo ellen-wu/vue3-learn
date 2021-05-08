@@ -1,0 +1,20 @@
+{
+  "name": "webpack04",
+  "version": "1.0.0",
+  "description": "webpack打包css    npm i css-loader style-loader -D   如果是打包less sass 需要使用 less-loader node-sass sass-loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.1.3",
+    "html-webpack-plugin": "^5.1.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

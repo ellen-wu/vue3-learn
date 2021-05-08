@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    /*
+        字符串中新增的方法
+            startsWith 判断以什么字符串开头
+            endsWith 判断以什么字符串结尾
+        模板字符串
+            ``
+    */
+
+    let url = 'https://www.baidu.com/';
+
+    if (url.startsWith('https')) {
+        console.log("https开头");
+    } else {
+        console.log("不是https开始的");
+    }
+
+    if (url.endsWith('com/')) {
+        console.log(url);
+    } else {
+        console.log("不是以com/结尾的");
+    }
+
+    let title = '我是标题';
+    let temp = `
+        <h1>${title}</h1>
+    `;
+
+    console.log(temp);
+
+
+</script>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="http://localhost/js/axios.js"></script>
+<script>
+    // 请求拦截器
+    axios.interceptors.request.use(config => {
+        console.log("请求拦截成功");
+        // 放行
+        return config;
+    }, err => {});
+
+
+    // 响应拦截器
+    axios.interceptors.response.use(config => {
+        console.log("响应拦截成功");
+        // 放行
+        return config;
+    }, err => {});
+
+    axios.get('http://localhost/getapi.php', {params: {username: 'lisi'}}).then(res => {
+        console.log(res.data);
+    });
+
+</script>

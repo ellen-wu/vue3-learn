@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script src="http://localhost/js/axios.js"></script>
+<script>
+    axios({
+        method: 'post',
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded'
+        },
+        url: 'http://localhost/getapi.php',
+
+        // params get参数 拼接到url
+        data: {
+            username: 'lisi',
+            age: 20,
+            gender: 'male'
+        }
+    }).then(res => {
+        console.log(res.data);
+    }).catch(err => {
+
+    });
+
+
+    axios.get('http://localhost/getapi.php', {params: {username: 'lisi'}}).then(res => {
+        console.log(res.data);
+    });
+
+    axios.all([
+        axios.get('http://localhost/getapi.php', {params: {uname: 'wangwu'}}),
+        axios.get('http://localhost/getapi.php', {params: {age: '34'}}),
+        axios.get('http://localhost/getapi.php', {params: {gender: 'male'}})
+    ]).then(res => {
+        console.log(res);
+    }).catch(err => {
+        console.log(err);
+    });
+
+    // 依次处理
+    axios.all([
+        axios.get('http://localhost/getapi.php', {params: {uname: 'wangwu'}}),
+        axios.get('http://localhost/getapi.php', {params: {age: '34'}}),
+        axios.get('http://localhost/getapi.php', {params: {gender: 'male'}})
+    ]).then(
+        axios.spread((res1, res2, res3) => {
+            console.log(res1);
+            console.log(res2);
+            console.log(res3);
+        })
+    ).catch(err => {
+        console.log(err);
+    });
+</script>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Person {
+        constructor(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        say() {
+            console.log(this.name);
+            console.log(this.age);
+            console.log(this.gender);
+        }
+    }
+
+    const p = new Person('zhangsan', 22, 'male');
+
+    p.say();
+    console.log(p);
+
+    class Student extends Person {
+        constructor(name, age, gender, school) {
+            super(name, age, gender);
+            this.school = school;
+        }
+    }
+
+    let name = '李四';
+    let age = '30';
+
+    const  jsonString = {name, age, sex: '男'};
+
+    console.log(jsonString);
+
+    console.log(JSON.stringify(jsonString));
+
+</script>

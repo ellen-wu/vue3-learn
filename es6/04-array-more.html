@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组中新增高级方法</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    // filter 过滤器
+    // map 映射
+    // reduce 汇总
+
+    /**
+     有一个商品列表
+     1、将大于10元的商品打折，取出大于10的商品
+     2、将10元以上的商品打5折
+     3、打完折的商品总价时多少
+     */
+    /*
+     let goods = [30, 50, 20, 5, 6, 6, 8, 90];
+
+     let goods1 = [];
+     for (let n of goods) {
+         if (n >= 10) {
+             goods1.push(n);
+         }
+     }
+
+     console.log(goods1);
+
+     let goods2 = [];
+     for (let n of goods1) {
+         goods2.push(n * 0.5);
+     }
+
+     console.log(goods2);
+
+     let sum = 0;
+     for (let n of goods2) {
+         sum += n;
+     }
+     console.log(sum);*/
+
+
+    let goods = [30, 50, 20, 5, 6, 6, 8, 90];
+
+    // 过滤
+    let goods1 = goods.filter(function (n) {
+        return n >= 10;
+    })
+
+    let goods2 = goods1.map(function (n) {
+        return n * 0.5;
+    })
+
+    let sum = goods2.reduce(function (s, n) {
+        return s + n;
+    }, 0)
+
+    console.log(goods1)
+    console.log(goods2)
+    console.log(sum)
+
+    let sum2 = goods.filter(n => n >= 10).map(n => n * 0.5).reduce((s, n) => s + n);
+
+    console.log(sum2);
+    /*
+        第一次，s参数是0，n是数组的第一个元素
+        第二次，s参数是第一次回调函数的返回值，n是数组中得第二个元素
+        以此类推
+    */
+
+
+</script>

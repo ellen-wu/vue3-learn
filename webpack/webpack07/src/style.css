@@ -1,0 +1,29 @@
+#box {
+    width: 200px;
+    height: 200px;
+    color: red;
+    background: #333333;
+}
+
+
+#img1 {
+    width: 240px;
+    height: 160px;
+    background: url(./images/1.jpg) no-repeat;
+}
+
+
+#img2 {
+    width: 240px;
+    height: 160px;
+    background: url(./images/2.jpg) no-repeat;
+}
+
+
+#img3 {
+    width: 240px;
+    height: 160px;
+    background: url(./images/3.jpg) no-repeat;
+}
+
+/* for test*/

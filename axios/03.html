@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="http://localhost/js/axios.js"></script>
+<script>
+    // 实例封装 用于请求不同路径的接口
+    let admin = axios.create({
+        baseUrl: "http://localhost/admin/",
+        timeout: 5000
+    });
+    let api = axios.create({
+        baseUrl: "http://localhost/api/",
+        timeout: 5000
+    });
+
+</script>
